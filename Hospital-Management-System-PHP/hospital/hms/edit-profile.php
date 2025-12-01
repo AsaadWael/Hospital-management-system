@@ -14,7 +14,7 @@ $gender=$_POST['gender'];
 $sql=mysqli_query($con,"Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
 if($sql)
 {
-$msg="Your Profile updated Successfully";
+$msg="Profiliniz başarıyla güncellendi";
 
 
 }
@@ -22,9 +22,9 @@ $msg="Your Profile updated Successfully";
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>User | Edit Profile</title>
+<html lang="tr">
+        <head>
+                <title>Kullanıcı | Profili Düzenle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -57,16 +57,16 @@ $msg="Your Profile updated Successfully";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Edit Profile</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>User </span>
-									</li>
-									<li class="active">
-										<span>Edit Profile</span>
-									</li>
-								</ol>
+                                                                        <h1 class="mainTitle">Kullanıcı | Profili Düzenle</h1>
+                                                                                                                               </div>
+                                                                <ol class="breadcrumb">
+                                                                        <li>
+                                                                                <span>Kullanıcı </span>
+                                                                        </li>
+                                                                        <li class="active">
+                                                                                <span>Profili Düzenle</span>
+                                                                        </li>
+                                                                </ol>
 							</div>
 						</section>
 						<!-- end: PAGE TITLE -->
@@ -80,7 +80,7 @@ $msg="Your Profile updated Successfully";
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Edit Profile</h5>
+                                                                                                        <h5 class="panel-title">Profili Düzenle</h5>
 												</div>
 												<div class="panel-body">
 									<?php 
@@ -88,55 +88,55 @@ $sql=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
 while($data=mysqli_fetch_array($sql))
 {
 ?>
-<h4><?php echo htmlentities($data['fullName']);?>'s Profile</h4>
-<p><b>Profile Reg. Date: </b><?php echo htmlentities($data['regDate']);?></p>
+<h4><?php echo htmlentities($data['fullName']);?> Profili</h4>
+<p><b>Profil Kayıt Tarihi: </b><?php echo htmlentities($data['regDate']);?></p>
 <?php if($data['updationDate']){?>
-<p><b>Profile Last Updation Date: </b><?php echo htmlentities($data['updationDate']);?></p>
+<p><b>Profil Son Güncelleme Tarihi: </b><?php echo htmlentities($data['updationDate']);?></p>
 <?php } ?>
 <hr />													<form role="form" name="edit" method="post">
 													
 
 <div class="form-group">
 															<label for="fname">
-																 User Name
-															</label>
-	<input type="text" name="fname" class="form-control" value="<?php echo htmlentities($data['fullName']);?>" >
+Kullanıcı Adı
+                                                                                                                        </label>
+        <input type="text" name="fname" class="form-control" value="<?php echo htmlentities($data['fullName']);?>" >
 														</div>
 
 
 <div class="form-group">
 															<label for="address">
-																 Address
-															</label>
+Adres
+                                                                                                                        </label>
 					<textarea name="address" class="form-control"><?php echo htmlentities($data['address']);?></textarea>
 														</div>
 <div class="form-group">
 															<label for="city">
-																 City
-															</label>
+Şehir
+                                                                                                                        </label>
 		<input type="text" name="city" class="form-control" required="required"  value="<?php echo htmlentities($data['city']);?>" >
 														</div>
 	
 <div class="form-group">
 									<label for="gender">
-																Gender
-															</label>
+                                                                                                                               Cinsiyet
+                                                                                                                        </label>
 
 <select name="gender" class="form-control" required="required" >
 <option value="<?php echo htmlentities($data['gender']);?>"><?php echo htmlentities($data['gender']);?></option>
-<option value="male">Male</option>	
-<option value="female">Female</option>	
-<option value="other">Other</option>	
+<option value="male">Erkek</option>
+<option value="female">Kadın</option>
+<option value="other">Diğer</option>
 </select>
 
 														</div>
 
 <div class="form-group">
 									<label for="fess">
-																 User Email
-															</label>
-					<input type="email" name="uemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['email']);?>">
-					<a href="change-emaild.php">Update your email id</a>
+Kullanıcı E-postası
+                                                                                                                        </label>
+                                        <input type="email" name="uemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['email']);?>">
+                                        <a href="change-emaild.php">E-posta adresinizi güncelleyin</a>
 														</div>
 
 
@@ -145,9 +145,9 @@ while($data=mysqli_fetch_array($sql))
 														
 														
 														
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Update
-														</button>
+                                                                                                                <button type="submit" name="submit" class="btn btn-o btn-primary">
+                                                                                                                        Güncelle
+                                                                                                                </button>
 													</form>
 													<?php } ?>
 												</div>

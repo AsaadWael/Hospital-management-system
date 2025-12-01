@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
 $sql=mysqli_query($con,"Update users set email='$email' where id='".$_SESSION['id']."'");
 if($sql)
 {
-$msg="Your email updated Successfully";
+$msg="E-posta adresiniz başarıyla güncellendi";
 
 
 }
@@ -18,9 +18,9 @@ $msg="Your email updated Successfully";
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>User | Edit Profile</title>
+<html lang="tr">
+        <head>
+                <title>Kullanıcı | Profili Düzenle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -53,16 +53,16 @@ $msg="Your email updated Successfully";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Edit Profile</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>User </span>
-									</li>
-									<li class="active">
-										<span>Edit Profile</span>
-									</li>
-								</ol>
+                                                                        <h1 class="mainTitle">Kullanıcı | Profili Düzenle</h1>
+                                                                                                                               </div>
+                                                                <ol class="breadcrumb">
+                                                                        <li>
+                                                                                <span>Kullanıcı </span>
+                                                                        </li>
+                                                                        <li class="active">
+                                                                                <span>Profili Düzenle</span>
+                                                                        </li>
+                                                                </ol>
 							</div>
 						</section>
 						<!-- end: PAGE TITLE -->
@@ -76,15 +76,15 @@ $msg="Your email updated Successfully";
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Edit Profile</h5>
+                                                                                                        <h5 class="panel-title">Profili Düzenle</h5>
 												</div>
 												<div class="panel-body">
 				<form name="registration" id="updatemail"  method="post">
 <div class="form-group">
 									<label for="fess">
-																 User Email
-															</label>
-			<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
+Kullanıcı E-postası
+                                                                                                                        </label>
+                        <input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="E-posta" required>
 								
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 														</div>
@@ -95,9 +95,9 @@ $msg="Your email updated Successfully";
 														
 														
 														
-														<button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
-															Update
-														</button>
+                                                                                                                <button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
+                                                                                                                        Güncelle
+                                                                                                                </button>
 													</form>
 										
 												</div>

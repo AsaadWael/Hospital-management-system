@@ -13,18 +13,18 @@ $num=mysqli_fetch_array($sql);
 if($num>0)
 {
  $con=mysqli_query($con,"update users set password='".md5($_POST['npass'])."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
-$_SESSION['msg1']="Password Changed Successfully !!";
+$_SESSION['msg1']="Şifre başarıyla değiştirildi!";
 }
 else
 {
-$_SESSION['msg1']="Old Password not match !!";
+$_SESSION['msg1']="Eski şifre eşleşmiyor!";
 }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>User  | change Password</title>
+<html lang="tr">
+        <head>
+                <title>Kullanıcı | Şifre Değiştir</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -45,25 +45,25 @@ function valid()
 {
 if(document.chngpwd.cpass.value=="")
 {
-alert("Current Password Filed is Empty !!");
+alert("Mevcut şifre alanı boş!");
 document.chngpwd.cpass.focus();
 return false;
 }
 else if(document.chngpwd.npass.value=="")
 {
-alert("New Password Filed is Empty !!");
+alert("Yeni şifre alanı boş!");
 document.chngpwd.npass.focus();
 return false;
 }
 else if(document.chngpwd.cfpass.value=="")
 {
-alert("Confirm Password Filed is Empty !!");
+alert("Şifre doğrulama alanı boş!");
 document.chngpwd.cfpass.focus();
 return false;
 }
 else if(document.chngpwd.npass.value!= document.chngpwd.cfpass.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("Şifre ve doğrulama şifresi eşleşmiyor!");
 document.chngpwd.cfpass.focus();
 return false;
 }
@@ -86,16 +86,16 @@ return true;
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Change Password</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>User</span>
-									</li>
-									<li class="active">
-										<span>Change Password</span>
-									</li>
-								</ol>
+                                                                        <h1 class="mainTitle">Kullanıcı | Şifre Değiştir</h1>
+                                                                                                                               </div>
+                                                                <ol class="breadcrumb">
+                                                                        <li>
+                                                                                <span>Kullanıcı</span>
+                                                                        </li>
+                                                                        <li class="active">
+                                                                                <span>Şifre Değiştir</span>
+                                                                        </li>
+                                                                </ol>
 							</div>
 						</section>
 						<!-- end: PAGE TITLE -->
@@ -108,37 +108,37 @@ return true;
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Change Password</h5>
+                                                                                                        <h5 class="panel-title">Şifre Değiştir</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
 								<?php echo htmlentities($_SESSION['msg1']="");?></p>	
 													<form role="form" name="chngpwd" method="post" onSubmit="return valid();">
 														<div class="form-group">
-															<label for="exampleInputEmail1">
-																Current Password
-															</label>
-							<input type="password" name="cpass" class="form-control"  placeholder="Enter Current Password">
-														</div>
-														<div class="form-group">
-															<label for="exampleInputPassword1">
-																New Password
-															</label>
-					<input type="password" name="npass" class="form-control"  placeholder="New Password">
-														</div>
-														
+                                                                                                                        <label for="exampleInputEmail1">
+                                                                                                                                Mevcut Şifre
+                                                                                                                        </label>
+                                                        <input type="password" name="cpass" class="form-control"  placeholder="Mevcut Şifrenizi Girin">
+                                                                                                                </div>
+                                                                                                                <div class="form-group">
+                                                                                                                        <label for="exampleInputPassword1">
+                                                                                                                                Yeni Şifre
+                                                                                                                        </label>
+                                        <input type="password" name="npass" class="form-control"  placeholder="Yeni Şifre">
+                                                                                                                </div>
+
 <div class="form-group">
-															<label for="exampleInputPassword1">
-																Confirm Password
-															</label>
-									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password">
-														</div>
+                                                                                                                        <label for="exampleInputPassword1">
+                                                                                                                                Şifreyi Onaylayın
+                                                                                                                        </label>
+                                                                        <input type="password" name="cfpass" class="form-control"  placeholder="Şifreyi Onaylayın">
+                                                                                                                </div>
 														
 														
 														
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Submit
-														</button>
+                                                                                                                <button type="submit" name="submit" class="btn btn-o btn-primary">
+                                                                                                                        Gönder
+                                                                                                                </button>
 													</form>
 												</div>
 											</div>

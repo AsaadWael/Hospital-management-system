@@ -14,7 +14,7 @@ $_SESSION['name']=$name;
 $_SESSION['email']=$email;
 header('location:reset-password.php');
 } else {
-echo "<script>alert('Invalid details. Please try with valid details');</script>";
+echo "<script>alert('Geçersiz bilgiler. Lütfen doğru bilgilerle tekrar deneyin');</script>";
 echo "<script>window.location.href ='forgot-password.php'</script>";
 
 
@@ -25,9 +25,9 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Pateint  Password Recovery</title>
+<html lang="tr">
+        <head>
+                <title>Hasta Şifre Kurtarma</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -44,50 +44,50 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="../index.php"><h2> HMS | Patient Password Recovery</h2></a>
-				</div>
+                                <a href="../index.php"><h2> HMS | Hasta Şifre Kurtarma</h2></a>
+                                </div>
 
-				<div class="box-login">
-					<form class="form-login" method="post">
-						<fieldset>
-							<legend>
-								Patient Password Recovery
-							</legend>
-							<p>
-								Please enter your Email and password to recover your password.<br />
-					
-							</p>
+                                <div class="box-login">
+                                        <form class="form-login" method="post">
+                                                <fieldset>
+                                                        <legend>
+                                                                Hasta Şifre Kurtarma
+                                                        </legend>
+                                                        <p>
+                                                                Lütfen şifrenizi kurtarmak için e-posta ve adınızı girin.<br />
 
-							<div class="form-group form-actions">
-								<span class="input-icon">
-									<input type="text" class="form-control" name="fullname" placeholder="Registred Full Name">
-									<i class="fa fa-lock"></i>
-									 </span>
-							</div>
+                                                        </p>
 
-							<div class="form-group">
-								<span class="input-icon">
-									<input type="email" class="form-control" name="email" placeholder="Registred Email">
-									<i class="fa fa-user"></i> </span>
-							</div>
+                                                        <div class="form-group form-actions">
+                                                                <span class="input-icon">
+                                                                        <input type="text" class="form-control" name="fullname" placeholder="Kayıtlı Ad Soyad">
+                                                                        <i class="fa fa-lock"></i>
+                                                                         </span>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                                <span class="input-icon">
+                                                                        <input type="email" class="form-control" name="email" placeholder="Kayıtlı E-posta">
+                                                                        <i class="fa fa-user"></i> </span>
+                                                        </div>
 
 							<div class="form-actions">
 								
-								<button type="submit" class="btn btn-primary pull-right" name="submit">
-									Reset <i class="fa fa-arrow-circle-right"></i>
-								</button>
-							</div>
-							<div class="new-account">
-								Already have an account? 
-								<a href="user-login.php">
-									Log-in
-								</a>
-							</div>
+                                                                <button type="submit" class="btn btn-primary pull-right" name="submit">
+                                                                        Sıfırla <i class="fa fa-arrow-circle-right"></i>
+                                                                </button>
+                                                        </div>
+                                                        <div class="new-account">
+                                                                Zaten hesabınız var mı?
+                                                                <a href="user-login.php">
+                                                                        Giriş Yap
+                                                                </a>
+                                                        </div>
 						</fieldset>
 					</form>
 
 					<div class="copyright">
-						&copy; <span class="text-bold text-uppercase">  Hospital Management System</span>
+                                                &copy; <span class="text-bold text-uppercase">  Hastane Yönetim Sistemi</span>
 					</div>
 			
 				</div>
