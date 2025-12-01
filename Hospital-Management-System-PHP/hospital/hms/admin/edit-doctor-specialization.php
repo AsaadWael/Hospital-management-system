@@ -10,14 +10,14 @@ if(isset($_POST['submit']))
 {
 $docspecialization=$_POST['doctorspecilization'];
 $sql=mysqli_query($con,"update  doctorSpecilization set specilization='$docspecialization' where id='$id'");
-$_SESSION['msg']="Doctor Specialization updated successfully !!";
+$_SESSION['msg']="Doktor uzmanlığı başarıyla güncellendi !!";
 } 
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | Edit Doctor Specialization</title>
+		<title>Yönetici | Doktor Uzmanlığını Düzenle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -48,14 +48,14 @@ $_SESSION['msg']="Doctor Specialization updated successfully !!";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Edit Doctor Specialization</h1>
+									<h1 class="mainTitle">Yönetici | Doktor Uzmanlığını Düzenle</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin</span>
+										<span>Yönetici</span>
 									</li>
 									<li class="active">
-										<span>Edit Doctor Specialization</span>
+										<span>Doktor Uzmanlığını Düzenle</span>
 									</li>
 								</ol>
 							</div>
@@ -70,7 +70,7 @@ $_SESSION['msg']="Doctor Specialization updated successfully !!";
 										<div class="col-lg-6 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Edit Doctor Specialization</h5>
+													<h5 class="panel-title">Doktor Uzmanlığını Düzenle</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg']);?>
@@ -78,7 +78,7 @@ $_SESSION['msg']="Doctor Specialization updated successfully !!";
 													<form role="form" name="dcotorspcl" method="post" >
 														<div class="form-group">
 															<label for="exampleInputEmail1">
-																Edit Doctor Specialization
+																Doktor Uzmanlığını Düzenle
 															</label>
 
 	<?php 
@@ -95,7 +95,7 @@ while($row=mysqli_fetch_array($sql))
 														
 														
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Update
+															Güncelle
 														</button>
 													</form>
 												</div>

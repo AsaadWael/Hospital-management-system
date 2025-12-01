@@ -9,7 +9,7 @@ if(strlen($_SESSION['id']==0)) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
 		<title>Admin | Manage Read Queries</title>
 		
@@ -46,10 +46,10 @@ if(strlen($_SESSION['id']==0)) {
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin</span>
+										<span>Yönetici</span>
 									</li>
 									<li class="active">
-										<span>Read Queries</span>
+										<span>Okunan Sorgular</span>
 									</li>
 								</ol>
 							</div>
@@ -61,7 +61,7 @@ if(strlen($_SESSION['id']==0)) {
 
 									<div class="row">
 								<div class="col-md-12">
-									<h5 class="over-title margin-bottom-15">Manage <span class="text-bold">Read Queries</span></h5>
+									<h5 class="over-title margin-bottom-15">Okunan sorguları yönet</h5>
 									<table class="table table-hover" id="sample-table-1">
 										<thead>
 											<tr>
@@ -71,7 +71,7 @@ if(strlen($_SESSION['id']==0)) {
 												<th>Contact No. </th>
 												<th>Message </th>
 												<th>Query Date</th>
-												<th>Action</th>
+												<th>İşlem</th>
 												
 											</tr>
 										</thead>
@@ -93,7 +93,7 @@ while($row=mysqli_fetch_array($sql))
 												
 												<td >
 												<div class="visible-md visible-lg hidden-sm hidden-xs">
-							<a href="query-details.php?id=<?php echo $row['id'];?>" class="btn btn-transparent btn-lg" title="View Details"><i class="fa fa-file"></i></a>
+							<a href="query-details.php?id=<?php echo $row['id'];?>" class="btn btn-transparent btn-lg" title="Detayları Gör"><i class="fa fa-file"></i></a>
 												</div>
 												<div class="visible-xs visible-sm hidden-md hidden-lg">
 													<div class="btn-group" dropdown is-open="status.isopen">

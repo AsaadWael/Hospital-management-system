@@ -15,20 +15,20 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
      $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='aboutus'");
     if ($query) {
  
-    echo '<script>alert("About Us has been updated.")</script>';
+    echo '<script>alert("Hakkımızda sayfası güncellendi.")</script>';
   }
   else
     {
-      echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+      echo '<script>alert("Bir hata oluştu. Lütfen tekrar deneyin.")</script>';
     }
   
 }
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | About Us </title>
+		<title>Yönetici | Hakkımızda </title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -61,14 +61,14 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin  | Update the About us Content</h1>
+									<h1 class="mainTitle">Yönetici | Hakkımızda içeriğini güncelle</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin </span>
+										<span>Yönetici </span>
 									</li>
 									<li class="active">
-										<span>Update the About us Content</span>
+										<span>Hakkımızda içeriğini güncelle</span>
 									</li>
 								</ol>
 							</div>
@@ -91,16 +91,16 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Page Title</label>
+                       <label for="exampleInputUsername1">Sayfa Başlığı</label>
                       <input id="pagetitle" name="pagetitle" type="text" class="form-control" required="true" value="<?php  echo $row['PageTitle'];?>">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Page Description</label>
+                      <label for="exampleInputEmail1">Sayfa Açıklaması</label>
                       <textarea class="form-control" name="pagedes" id="pagedes" rows="12"><?php  echo $row['PageDescription'];?></textarea>
                     </div>
                     
                     <?php } ?>
-                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2" name="submit">Gönder</button>
                   </form>
 								</div>
 							</div>
