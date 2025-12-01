@@ -118,7 +118,7 @@ Hasta E-postası
 </div>
 <div class="form-group">
 <label class="block">
-Gender
+Cinsiyet
 </label>
 <div class="clip-radio radio-primary">
 <input type="radio" id="rg-female" name="gender" value="female" >
