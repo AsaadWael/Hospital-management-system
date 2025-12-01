@@ -82,9 +82,9 @@ $msg="Your email updated Successfully";
 				<form name="registration" id="updatemail"  method="post">
 <div class="form-group">
 									<label for="fess">
-																 User Email
+																 User E-posta
 															</label>
-			<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
+			<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="E-posta" required>
 								
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 														</div>

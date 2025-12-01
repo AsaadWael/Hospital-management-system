@@ -133,7 +133,7 @@ while($data=mysqli_fetch_array($sql))
 
 <div class="form-group">
 									<label for="fess">
-																 User Email
+																 User E-posta
 															</label>
 					<input type="email" name="uemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['email']);?>">
 					<a href="change-emaild.php">Update your email id</a>

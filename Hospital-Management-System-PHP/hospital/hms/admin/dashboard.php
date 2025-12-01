@@ -11,7 +11,7 @@ if(strlen($_SESSION['id']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin  | Dashboard</title>
+                <title>Yönetici | Kontrol Paneli</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -44,14 +44,14 @@ if(strlen($_SESSION['id']==0)) {
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Dashboard</h1>
+                                                                        <h1 class="mainTitle">Yönetici | Kontrol Paneli</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin</span>
+                                                                                <span>Yönetici</span>
 									</li>
 									<li class="active">
-										<span>Dashboard</span>
+										<span>Kontrol Paneli</span>
 									</li>
 								</ol>
 							</div>
@@ -64,7 +64,7 @@ if(strlen($_SESSION['id']==0)) {
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body">
 											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
-											<h2 class="StepTitle">Manage Users</h2>
+											<h2 class="StepTitle">Manage Kullanıcılar</h2>
 											
 											<p class="links cl-effect-1">
 												<a href="manage-users.php">
@@ -72,7 +72,7 @@ if(strlen($_SESSION['id']==0)) {
 $num_rows = mysqli_num_rows($result);
 {
 ?>
-											Total Users :<?php echo htmlentities($num_rows);  } ?>		
+											Total Kullanıcılar :<?php echo htmlentities($num_rows);  } ?>		
 												</a>
 											</p>
 										</div>
@@ -82,7 +82,7 @@ $num_rows = mysqli_num_rows($result);
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body">
 											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-											<h2 class="StepTitle">Manage Doctors</h2>
+											<h2 class="StepTitle">Manage Doktorlar</h2>
 										
 											<p class="cl-effect-1">
 												<a href="manage-doctors.php">
@@ -90,7 +90,7 @@ $num_rows = mysqli_num_rows($result);
 $num_rows1 = mysqli_num_rows($result1);
 {
 ?>
-											Total Doctors :<?php echo htmlentities($num_rows1);  } ?>		
+											Total Doktorlar :<?php echo htmlentities($num_rows1);  } ?>		
 												</a>
 												
 											</p>
@@ -122,7 +122,7 @@ $num_rows2 = mysqli_num_rows($sql);
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body">
 											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
-											<h2 class="StepTitle">Manage Patients</h2>
+											<h2 class="StepTitle">Manage Hastalar</h2>
 											
 											<p class="links cl-effect-1">
 												<a href="manage-patient.php">
@@ -130,7 +130,7 @@ $num_rows2 = mysqli_num_rows($sql);
 $num_rows = mysqli_num_rows($result);
 {
 ?>
-Total Patients :<?php echo htmlentities($num_rows);  
+Total Hastalar :<?php echo htmlentities($num_rows);  
 } ?>		
 </a>
 											</p>

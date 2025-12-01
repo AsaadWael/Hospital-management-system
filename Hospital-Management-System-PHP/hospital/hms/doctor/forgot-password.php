@@ -6,7 +6,7 @@ include("include/config.php");
 if(isset($_POST['submit'])){
 $contactno=$_POST['contactno'];
 $email=$_POST['email'];
-$query=mysqli_query($con,"select id from  doctors where contactno='$contactno' and docEmail='$email'");
+$query=mysqli_query($con,"select id from  doctors where contactno='$contactno' and docE-posta='$email'");
 $row=mysqli_num_rows($query);
 if($row>0){
 
@@ -27,7 +27,7 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Password Recovery</title>
+		<title>Şifre Recovery</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -44,17 +44,17 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="../../index.php"><h2> HMS | Doctor Password Recovery</h2></a>
+				<a href="../../index.php"><h2> HMS | Doctor Şifre Recovery</h2></a>
 				</div>
 
 				<div class="box-login">
 					<form class="form-login" method="post">
 						<fieldset>
 							<legend>
-								Doctor Password Recovery
+								Doctor Şifre Recovery
 							</legend>
 							<p>
-								Please enter your  Contact number and Email to recover your password.<br />
+								Please enter your  Contact number and E-posta to recover your password.<br />
 					
 							</p>
 
@@ -67,7 +67,7 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" placeholder="Registred Email">
+									<input type="email" class="form-control" name="email" placeholder="Registred E-posta">
 									<i class="fa fa-user"></i> </span>
 							</div>
 
@@ -87,7 +87,7 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 					</form>
 
 					<div class="copyright">
-					<span class="text-bold text-uppercase"> Hospital Management System</span>
+					<span class="text-bold text-uppercase"> Hastane Yönetim Sistemi</span>
 					</div>
 			
 				</div>

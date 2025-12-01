@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Users | Medical History</title>
+		<title>Kullanıcılar | Tıbbi Geçmiş</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -60,14 +60,14 @@ if(isset($_POST['submit']))
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Users | Medical History</h1>
+<h1 class="mainTitle">Kullanıcılar | Tıbbi Geçmiş</h1>
 </div>
 <ol class="breadcrumb">
 <li>
-<span>Users</span>
+<span>Kullanıcılar</span>
 </li>
 <li class="active">
-<span>Medical History</span>
+<span>Tıbbi Geçmiş</span>
 </li>
 </ol>
 </div>
@@ -75,7 +75,7 @@ if(isset($_POST['submit']))
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
-<h5 class="over-title margin-bottom-15">Users <span class="text-bold">Medical History</span></h5>
+<h5 class="over-title margin-bottom-15">Kullanıcılar <span class="text-bold">Tıbbi Geçmiş</span></h5>
 <?php
                                $vid=$_GET['viewid'];
                                $ret=mysqli_query($con,"select * from tblpatient where ID='$vid'");
@@ -90,11 +90,11 @@ while ($row=mysqli_fetch_array($ret)) {
     <tr>
     <th scope>Patient Name</th>
     <td><?php  echo $row['PatientName'];?></td>
-    <th scope>Patient Email</th>
-    <td><?php  echo $row['PatientEmail'];?></td>
+    <th scope>Patient E-posta</th>
+    <td><?php  echo $row['PatientE-posta'];?></td>
   </tr>
   <tr>
-    <th scope>Patient Mobile Number</th>
+    <th scope>Patient Mobil Numara</th>
     <td><?php  echo $row['PatientContno'];?></td>
     <th>Patient Address</th>
     <td><?php  echo $row['PatientAdd'];?></td>
@@ -107,7 +107,7 @@ while ($row=mysqli_fetch_array($ret)) {
   </tr>
   <tr>
     
-    <th>Patient Medical History(if any)</th>
+    <th>Patient Tıbbi Geçmiş(if any)</th>
     <td><?php  echo $row['PatientMedhis'];?></td>
      <th>Patient Reg Date</th>
     <td><?php  echo $row['CreationDate'];?></td>
@@ -124,7 +124,7 @@ $ret=mysqli_query($con,"select * from tblmedicalhistory  where PatientID='$vid'"
  ?>
 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
   <tr align="center">
-   <th colspan="8" >Medical History</th> 
+   <th colspan="8" >Tıbbi Geçmiş</th> 
   </tr>
   <tr>
     <th>#</th>

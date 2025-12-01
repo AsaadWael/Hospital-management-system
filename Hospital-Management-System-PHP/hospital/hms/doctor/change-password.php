@@ -17,18 +17,18 @@ if($num>0)
 {
 $npass=md5($_POST['npass']);
  $con=mysqli_query($con,"update doctors set password='$npass', updationDate='$currentTime' where id='$did'");
-$_SESSION['msg1']="Password Changed Successfully !!";
+$_SESSION['msg1']="Şifre Changed Successfully !!";
 }
 else
 {
-$_SESSION['msg1']="Old Password not match !!";
+$_SESSION['msg1']="Old Şifre not match !!";
 }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Doctor  | change Password</title>
+		<title>Doctor  | change Şifre</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -49,25 +49,25 @@ function valid()
 {
 if(document.chngpwd.cpass.value=="")
 {
-alert("Current Password Filed is Empty !!");
+alert("Current Şifre Filed is Empty !!");
 document.chngpwd.cpass.focus();
 return false;
 }
 else if(document.chngpwd.npass.value=="")
 {
-alert("New Password Filed is Empty !!");
+alert("New Şifre Filed is Empty !!");
 document.chngpwd.npass.focus();
 return false;
 }
 else if(document.chngpwd.cfpass.value=="")
 {
-alert("Confirm Password Filed is Empty !!");
+alert("Confirm Şifre Filed is Empty !!");
 document.chngpwd.cfpass.focus();
 return false;
 }
 else if(document.chngpwd.npass.value!= document.chngpwd.cfpass.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("Şifre and Confirm Şifre Field do not match  !!");
 document.chngpwd.cfpass.focus();
 return false;
 }
@@ -90,14 +90,14 @@ return true;
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Doctor | Change Password</h1>
+									<h1 class="mainTitle">Doctor | Şifreyi Değiştir</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
 										<span>Doctor</span>
 									</li>
 									<li class="active">
-										<span>Change Password</span>
+										<span>Şifreyi Değiştir</span>
 									</li>
 								</ol>
 							</div>
@@ -112,30 +112,30 @@ return true;
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Change Password</h5>
+													<h5 class="panel-title">Şifreyi Değiştir</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
 								<?php echo htmlentities($_SESSION['msg1']="");?></p>	
 													<form role="form" name="chngpwd" method="post" onSubmit="return valid();">
 														<div class="form-group">
-															<label for="exampleInputEmail1">
-																Current Password
+															<label for="exampleInputE-posta1">
+																Current Şifre
 															</label>
-							<input type="password" name="cpass" class="form-control"  placeholder="Enter Current Password">
+							<input type="password" name="cpass" class="form-control"  placeholder="Enter Current Şifre">
 														</div>
 														<div class="form-group">
-															<label for="exampleInputPassword1">
-																New Password
+															<label for="exampleInputŞifre1">
+																New Şifre
 															</label>
-					<input type="password" name="npass" class="form-control"  placeholder="New Password">
+					<input type="password" name="npass" class="form-control"  placeholder="New Şifre">
 														</div>
 														
 <div class="form-group">
-															<label for="exampleInputPassword1">
-																Confirm Password
+															<label for="exampleInputŞifre1">
+																Confirm Şifre
 															</label>
-									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password">
+									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Şifre">
 														</div>
 														
 														

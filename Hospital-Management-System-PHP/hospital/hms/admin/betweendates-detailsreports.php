@@ -10,7 +10,7 @@ if(strlen($_SESSION['id']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | View Patients</title>
+		<title>Admin | View Hastalar</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -38,14 +38,14 @@ if(strlen($_SESSION['id']==0)) {
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Admin | View Patients</h1>
+<h1 class="mainTitle">Admin | View Hastalar</h1>
 </div>
 <ol class="breadcrumb">
 <li>
 <span>Admin</span>
 </li>
 <li class="active">
-<span>View Patients</span>
+<span>View Hastalar</span>
 </li>
 </ol>
 </div>

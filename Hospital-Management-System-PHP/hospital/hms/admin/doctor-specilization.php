@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
 {
 $doctorspecilization=$_POST['doctorspecilization'];
 $sql=mysqli_query($con,"insert into doctorSpecilization(specilization) values('$doctorspecilization')");
-$_SESSION['msg']="Doctor Specialization added successfully !!";
+$_SESSION['msg']="Doktor Uzmanlığı added successfully !!";
 }
 //Code Deletion
 if(isset($_GET['del']))
@@ -23,7 +23,7 @@ $_SESSION['msg']="data deleted !!";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | Doctor Specialization</title>
+		<title>Admin | Doktor Uzmanlığı</title>
 	
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -54,14 +54,14 @@ $_SESSION['msg']="data deleted !!";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Add Doctor Specialization</h1>
+									<h1 class="mainTitle">Admin | Add Doktor Uzmanlığı</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
 										<span>Admin</span>
 									</li>
 									<li class="active">
-										<span>Add Doctor Specialization</span>
+										<span>Add Doktor Uzmanlığı</span>
 									</li>
 								</ol>
 							</div>
@@ -76,17 +76,17 @@ $_SESSION['msg']="data deleted !!";
 										<div class="col-lg-6 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Doctor Specialization</h5>
+													<h5 class="panel-title">Doktor Uzmanlığı</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg']);?>
 								<?php echo htmlentities($_SESSION['msg']="");?></p>	
 													<form role="form" name="dcotorspcl" method="post" >
 														<div class="form-group">
-															<label for="exampleInputEmail1">
-																Doctor Specialization
+															<label for="exampleInputE-posta1">
+																Doktor Uzmanlığı
 															</label>
-							<input type="text" name="doctorspecilization" class="form-control"  placeholder="Enter Doctor Specialization">
+							<input type="text" name="doctorspecilization" class="form-control"  placeholder="Enter Doktor Uzmanlığı">
 														</div>
 												
 														

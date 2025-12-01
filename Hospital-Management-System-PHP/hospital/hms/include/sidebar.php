@@ -5,7 +5,7 @@
 						
 						<!-- start: MAIN NAVIGATION MENU -->
 						<div class="navbar-title">
-							<span>Main Navigation</span>
+							<span>Ana Menü</span>
 						</div>
 						<ul class="main-navigation-menu">
 							<li>
@@ -15,7 +15,7 @@
 											<i class="ti-home"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Dashboard </span>
+											<span class="title"> Kontrol Paneli </span>
 										</div>
 									</div>
 								</a>
@@ -27,7 +27,7 @@
 											<i class="ti-pencil-alt"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Book Appointment </span>
+											<span class="title"> Randevu Al </span>
 										</div>
 									</div>
 								</a>
@@ -40,7 +40,7 @@
 											<i class="ti-list"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Appointment History </span>
+											<span class="title"> Randevu Geçmişi </span>
 										</div>
 									</div>
 								</a>
@@ -52,7 +52,7 @@
 											<i class="ti-list"></i>
 										</div>
 										<div class="item-inner">
-											<span class="title"> Medical History </span>
+											<span class="title"> Tıbbi Geçmiş </span>
 										</div>
 									</div>
 								</a>

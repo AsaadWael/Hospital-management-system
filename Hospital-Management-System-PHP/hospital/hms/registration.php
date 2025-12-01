@@ -40,7 +40,7 @@ function valid()
 {
  if(document.registration.password.value!= document.registration.password_again.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("Şifre and Confirm Şifre Field do not match  !!");
 document.registration.password_again.focus();
 return false;
 }
@@ -97,18 +97,18 @@ return true;
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
+									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="E-posta" required>
 									<i class="fa fa-envelope"></i> </span>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 							</div>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+									<input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control"  id="password_again" name="password_again" placeholder="Password Again" required>
+									<input type="password" class="form-control"  id="password_again" name="password_again" placeholder="Şifre Again" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							<div class="form-group">
@@ -134,7 +134,7 @@ return true;
 					</form>
 
 					<div class="copyright">
-						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
+						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>Tümü rights reserved</span>
 					</div>
 
 				</div>

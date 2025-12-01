@@ -92,7 +92,7 @@ while($row=mysqli_fetch_array($sql))
 											</tr>
 
 											<tr>
-												<th>Email Id</th>
+												<th>E-posta Id</th>
 												<td><?php echo $row['email'];?></td>
 											</tr>
 											<tr>

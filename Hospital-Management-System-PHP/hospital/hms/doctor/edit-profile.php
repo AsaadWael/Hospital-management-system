@@ -7,7 +7,7 @@ if(strlen($_SESSION['id']==0)) {
   } else{
 if(isset($_POST['submit']))
 {
-	$docspecialization=$_POST['Doctorspecialization'];
+	$docspecialization=$_POST['Doktorlarpecialization'];
 $docname=$_POST['docname'];
 $docaddress=$_POST['clinicaddress'];
 $docfees=$_POST['docfees'];
@@ -81,7 +81,7 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
 												<div class="panel-body">
 									<?php 
 $did=$_SESSION['dlogin'];
-$sql=mysqli_query($con,"select * from doctors where docEmail='$did'");
+$sql=mysqli_query($con,"select * from doctors where docE-posta='$did'");
 while($data=mysqli_fetch_array($sql))
 {
 ?>
@@ -94,9 +94,9 @@ while($data=mysqli_fetch_array($sql))
 													<form role="form" name="adddoc" method="post" onSubmit="return valid();">
 														<div class="form-group">
 															<label for="DoctorSpecialization">
-																Doctor Specialization
+																Doktor Uzmanlığı
 															</label>
-							<select name="Doctorspecialization" class="form-control" required="required">
+							<select name="Doktorlarpecialization" class="form-control" required="required">
 					<option value="<?php echo htmlentities($data['specilization']);?>">
 					<?php echo htmlentities($data['specilization']);?></option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
@@ -141,9 +141,9 @@ while($row=mysqli_fetch_array($ret))
 
 <div class="form-group">
 									<label for="fess">
-																 Doctor Email
+																 Doctor E-posta
 															</label>
-					<input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docEmail']);?>">
+					<input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docE-posta']);?>">
 														</div>
 
 

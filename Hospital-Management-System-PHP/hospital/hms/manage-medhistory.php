@@ -9,7 +9,7 @@ check_login();
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Reg Users | View Medical History</title>
+		<title>Reg Kullanıcılar | View Tıbbi Geçmiş</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -37,14 +37,14 @@ check_login();
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Users | Medical History</h1>
+<h1 class="mainTitle">Kullanıcılar | Tıbbi Geçmiş</h1>
 </div>
 <ol class="breadcrumb">
 <li>
-<span>Users</span>
+<span>Kullanıcılar</span>
 </li>
 <li class="active">
-<span>View Medical History</span>
+<span>View Tıbbi Geçmiş</span>
 </li>
 </ol>
 </div>
@@ -52,7 +52,7 @@ check_login();
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
-<h5 class="over-title margin-bottom-15">View <span class="text-bold">Medical History</span></h5>
+<h5 class="over-title margin-bottom-15">View <span class="text-bold">Tıbbi Geçmiş</span></h5>
 	
 <table class="table table-hover" id="sample-table-1">
 <thead>
@@ -69,7 +69,7 @@ check_login();
 <tbody>
 <?php
 $uid=$_SESSION['id'];
-$sql=mysqli_query($con,"select tblpatient.* from tblpatient join users on users.email=tblpatient.PatientEmail where users.id='$uid'");
+$sql=mysqli_query($con,"select tblpatient.* from tblpatient join users on users.email=tblpatient.PatientE-posta where users.id='$uid'");
 $cnt=1;
 while($row=mysqli_fetch_array($sql))
 {

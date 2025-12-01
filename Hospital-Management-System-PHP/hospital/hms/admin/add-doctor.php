@@ -7,14 +7,14 @@ if(strlen($_SESSION['id']==0)) {
   } else{
 
 if(isset($_POST['submit']))
-{	$docspecialization=$_POST['Doctorspecialization'];
+{	$docspecialization=$_POST['Doktorlarpecialization'];
 $docname=$_POST['docname'];
 $docaddress=$_POST['clinicaddress'];
 $docfees=$_POST['docfees'];
 $doccontactno=$_POST['doccontact'];
 $docemail=$_POST['docemail'];
 $password=md5($_POST['npass']);
-$sql=mysqli_query($con,"insert into doctors(specilization,doctorName,address,docFees,contactno,docEmail,password) values('$docspecialization','$docname','$docaddress','$docfees','$doccontactno','$docemail','$password')");
+$sql=mysqli_query($con,"insert into doctors(specilization,doctorName,address,docFees,contactno,docE-posta,password) values('$docspecialization','$docname','$docaddress','$docfees','$doccontactno','$docemail','$password')");
 if($sql)
 {
 echo "<script>alert('Doctor info added Successfully');</script>";
@@ -26,7 +26,7 @@ echo "<script>window.location.href ='manage-doctors.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | Add Doctor</title>
+		<title>Admin | Doktor Ekle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -47,7 +47,7 @@ function valid()
 {
  if(document.adddoc.npass.value!= document.adddoc.cfpass.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("Şifre and Confirm Şifre Field do not match  !!");
 document.adddoc.cfpass.focus();
 return false;
 }
@@ -86,14 +86,14 @@ error:function (){}
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Add Doctor</h1>
+									<h1 class="mainTitle">Admin | Doktor Ekle</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
 										<span>Admin</span>
 									</li>
 									<li class="active">
-										<span>Add Doctor</span>
+										<span>Doktor Ekle</span>
 									</li>
 								</ol>
 							</div>
@@ -108,16 +108,16 @@ error:function (){}
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Add Doctor</h5>
+													<h5 class="panel-title">Doktor Ekle</h5>
 												</div>
 												<div class="panel-body">
 									
 													<form role="form" name="adddoc" method="post" onSubmit="return valid();">
 														<div class="form-group">
 															<label for="DoctorSpecialization">
-																Doctor Specialization
+																Doktor Uzmanlığı
 															</label>
-							<select name="Doctorspecialization" class="form-control" required="true">
+							<select name="Doktorlarpecialization" class="form-control" required="true">
 																<option value="">Select Specialization</option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
 while($row=mysqli_fetch_array($ret))
@@ -161,9 +161,9 @@ while($row=mysqli_fetch_array($ret))
 
 <div class="form-group">
 									<label for="fess">
-																 Doctor Email
+																 Doctor E-posta
 															</label>
-<input type="email" id="docemail" name="docemail" class="form-control"  placeholder="Enter Doctor Email id" required="true" onBlur="checkemailAvailability()">
+<input type="email" id="docemail" name="docemail" class="form-control"  placeholder="Enter Doctor E-posta id" required="true" onBlur="checkemailAvailability()">
 <span id="email-availability-status"></span>
 </div>
 
@@ -171,17 +171,17 @@ while($row=mysqli_fetch_array($ret))
 
 														
 														<div class="form-group">
-															<label for="exampleInputPassword1">
-																 Password
+															<label for="exampleInputŞifre1">
+																 Şifre
 															</label>
-					<input type="password" name="npass" class="form-control"  placeholder="New Password" required="required">
+					<input type="password" name="npass" class="form-control"  placeholder="New Şifre" required="required">
 														</div>
 														
 <div class="form-group">
-															<label for="exampleInputPassword2">
-																Confirm Password
+															<label for="exampleInputŞifre2">
+																Confirm Şifre
 															</label>
-									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password" required="required">
+									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Şifre" required="required">
 														</div>
 														
 														

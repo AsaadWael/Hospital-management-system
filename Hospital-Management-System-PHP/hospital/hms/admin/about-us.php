@@ -15,7 +15,7 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
      $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='aboutus'");
     if ($query) {
  
-    echo '<script>alert("About Us has been updated.")</script>';
+    echo '<script>alert("Hakkımızda has been updated.")</script>';
   }
   else
     {
@@ -28,7 +28,7 @@ $pagedes=$con->real_escape_string($_POST['pagedes']);
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | About Us </title>
+		<title>Admin | Hakkımızda </title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -91,16 +91,16 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Page Title</label>
+                       <label for="exampleInputUsername1">Sayfa Başlığı</label>
                       <input id="pagetitle" name="pagetitle" type="text" class="form-control" required="true" value="<?php  echo $row['PageTitle'];?>">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Page Description</label>
+                      <label for="exampleInputE-posta1">Sayfa Açıklaması</label>
                       <textarea class="form-control" name="pagedes" id="pagedes" rows="12"><?php  echo $row['PageDescription'];?></textarea>
                     </div>
                     
                     <?php } ?>
-                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2" name="submit">Gönder</button>
                   </form>
 								</div>
 							</div>

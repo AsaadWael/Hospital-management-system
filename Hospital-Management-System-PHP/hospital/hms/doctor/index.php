@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
 {
 $uname=$_POST['username'];
 $dpassword=md5($_POST['password']);	
-$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='$uname' and password='$dpassword'");
+$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docE-posta='$uname' and password='$dpassword'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
@@ -26,7 +26,7 @@ else
 $uip=$_SERVER['REMOTE_ADDR'];
 $status=0;
 mysqli_query($con,"insert into doctorslog(username,userip,status) values('$uname','$uip','$status')");
-echo "<script>alert('Invalid username or password');</script>";
+echo "<script>alert('Geçersiz kullanıcı adı veya şifre');</script>";
 echo "<script>window.location.href='index.php'</script>";
 
 }
@@ -37,7 +37,7 @@ echo "<script>window.location.href='index.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Doctor Login</title>
+		<title>Doktor Girişi</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -54,37 +54,37 @@ echo "<script>window.location.href='index.php'</script>";
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="../../index.php">	<h2> HMS | Doctor Login</h2></a>
+				<a href="../../index.php">	<h2> HMS | Doktor Girişi</h2></a>
 				</div>
 
 				<div class="box-login">
 					<form class="form-login" method="post">
 						<fieldset>
 							<legend>
-								Sign in to your account
+								Hesabınıza giriş yapın
 							</legend>
 							<p>
-								Please enter your name and password to log in.<br />
+								Lütfen giriş yapmak için kullanıcı adınızı ve şifrenizi girin.<br />
 								<span style="color:red;"><?php echo $_SESSION['errmsg']; ?><?php echo $_SESSION['errmsg']="";?></span>
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="username" placeholder="Email" required>
+									<input type="text" class="form-control" name="username" placeholder="E-posta" required>
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="password" class="form-control password" name="password" placeholder="Password" required>
+									<input type="password" class="form-control password" name="password" placeholder="Şifre" required>
 									<i class="fa fa-lock"></i>
 									 </span>
-									 <a href="forgot-password.php">
-									Forgot Password ?
-								</a>
+                                                                         <a href="forgot-password.php">
+                                                                        Şifremi Unuttum?
+                                                                </a>
 							</div>
 							<div class="form-actions">
 								
 								<button type="submit" class="btn btn-primary pull-right" name="submit">
-									Login <i class="fa fa-arrow-circle-right"></i>
+									Giriş Yap <i class="fa fa-arrow-circle-right"></i>
 								</button>
 							</div>
 							
@@ -93,7 +93,7 @@ echo "<script>window.location.href='index.php'</script>";
 					</form>
 
 					<div class="copyright">
-					<span class="text-bold text-uppercase"> Hospital Management System</span>
+					<span class="text-bold text-uppercase"> Hastane Yönetim Sistemi</span>
 					</div>
 			
 				</div>

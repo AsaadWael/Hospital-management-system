@@ -14,10 +14,10 @@ if(isset($_POST['submit']))
 $pagedes=$_POST['pagedes'];
 $email=$_POST['email'];
  $mobnum=$_POST['mobnum'];
-     $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes',Email='$email',MobileNumber='$mobnum' where  PageType='contactus'");
+     $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes',E-posta='$email',MobileNumber='$mobnum' where  PageType='contactus'");
     if ($query) {
  
-    echo '<script>alert("Contact Us has been updated.")</script>';
+    echo '<script>alert("Bize Ulaşın has been updated.")</script>';
   }
   else
     {
@@ -30,7 +30,7 @@ $email=$_POST['email'];
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | Cotnact Us </title>
+		<title>Admin | Bize Ulaşın </title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -93,19 +93,19 @@ while ($row=mysqli_fetch_array($ret)) {
 
 ?>
                     <div class="form-group">
-                       <label for="exampleInputUsername1">Page Title</label>
+                       <label for="exampleInputUsername1">Sayfa Başlığı</label>
                       <input id="pagetitle" name="pagetitle" type="text" class="form-control" required="true" value="<?php  echo $row['PageTitle'];?>">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Page Description</label>
+                      <label for="exampleInputE-posta1">Sayfa Açıklaması</label>
                       <textarea class="form-control" name="pagedes" id="pagedes" rows="5"><?php  echo $row['PageDescription'];?></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Email Addresss</label>
+                      <label for="exampleInputUsername1">E-posta Adresi</label>
                      <input type="email" class="form-control" name="email" value="<?php  echo $row['Email'];?>" required='true'>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Mobile Number</label>
+                      <label for="exampleInputUsername1">Mobil Numara</label>
                      <input type="text" class="form-control" name="mobnum" value="<?php  echo $row['MobileNumber'];?>" required='true' maxlength="10" pattern='[0-9]+'>
                     </div>
                     

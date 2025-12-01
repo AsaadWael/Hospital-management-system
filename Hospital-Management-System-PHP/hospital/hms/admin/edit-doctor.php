@@ -9,13 +9,13 @@ if(strlen($_SESSION['id']==0)) {
 $did=intval($_GET['id']);// get doctor id
 if(isset($_POST['submit']))
 {
-	$docspecialization=$_POST['Doctorspecialization'];
+	$docspecialization=$_POST['Doktorlarpecialization'];
 $docname=$_POST['docname'];
 $docaddress=$_POST['clinicaddress'];
 $docfees=$_POST['docfees'];
 $doccontactno=$_POST['doccontact'];
 $docemail=$_POST['docemail'];
-$sql=mysqli_query($con,"Update doctors set specilization='$docspecialization',doctorName='$docname',address='$docaddress',docFees='$docfees',contactno='$doccontactno',docEmail='$docemail' where id='$did'");
+$sql=mysqli_query($con,"Update doctors set specilization='$docspecialization',doctorName='$docname',address='$docaddress',docFees='$docfees',contactno='$doccontactno',docE-posta='$docemail' where id='$did'");
 if($sql)
 {
 $msg="Doctor Details updated Successfully";
@@ -99,9 +99,9 @@ while($data=mysqli_fetch_array($sql))
 													<form role="form" name="adddoc" method="post" onSubmit="return valid();">
 														<div class="form-group">
 															<label for="DoctorSpecialization">
-																Doctor Specialization
+																Doktor Uzmanlığı
 															</label>
-							<select name="Doctorspecialization" class="form-control" required="required">
+							<select name="Doktorlarpecialization" class="form-control" required="required">
 					<option value="<?php echo htmlentities($data['specilization']);?>">
 					<?php echo htmlentities($data['specilization']);?></option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
@@ -146,9 +146,9 @@ while($row=mysqli_fetch_array($ret))
 
 <div class="form-group">
 									<label for="fess">
-																 Doctor Email
+																 Doctor E-posta
 															</label>
-					<input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docEmail']);?>">
+					<input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docE-posta']);?>">
 														</div>
 
 

@@ -67,7 +67,7 @@ if(strlen($_SESSION['id']==0)) {
 											<tr>
 												<th class="center">#</th>
 												<th>Name</th>
-												<th class="hidden-xs">Email</th>
+												<th class="hidden-xs">E-posta</th>
 												<th>Contact No. </th>
 												<th>Message </th>
 												<th>Query Date</th>

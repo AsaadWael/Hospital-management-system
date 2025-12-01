@@ -16,7 +16,7 @@ $gender=$_POST['gender'];
 $pataddress=$_POST['pataddress'];
 $patage=$_POST['patage'];
 $medhis=$_POST['medhis'];
-$sql=mysqli_query($con,"update tblpatient set PatientName='$patname',PatientContno='$patcontact',PatientEmail='$patemail',PatientGender='$gender',PatientAdd='$pataddress',PatientAge='$patage',PatientMedhis='$medhis' where ID='$eid'");
+$sql=mysqli_query($con,"update tblpatient set PatientName='$patname',PatientContno='$patcontact',PatientE-posta='$patemail',PatientGender='$gender',PatientAdd='$pataddress',PatientAge='$patage',PatientMedhis='$medhis' where ID='$eid'");
 if($sql)
 {
 echo "<script>alert('Patient info updated Successfully');</script>";
@@ -28,7 +28,7 @@ header('location:manage-patient.php');
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Doctor | Add Patient</title>
+		<title>Doctor | Hasta Ekle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -59,14 +59,14 @@ header('location:manage-patient.php');
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Patient | Add Patient</h1>
+<h1 class="mainTitle">Patient | Hasta Ekle</h1>
 </div>
 <ol class="breadcrumb">
 <li>
 <span>Patient</span>
 </li>
 <li class="active">
-<span>Add Patient</span>
+<span>Hasta Ekle</span>
 </li>
 </ol>
 </div>
@@ -78,7 +78,7 @@ header('location:manage-patient.php');
 <div class="col-lg-8 col-md-12">
 <div class="panel panel-white">
 <div class="panel-heading">
-<h5 class="panel-title">Add Patient</h5>
+<h5 class="panel-title">Hasta Ekle</h5>
 </div>
 <div class="panel-body">
 <form role="form" name="" method="post">
@@ -103,9 +103,9 @@ Patient Name
 </div>
 <div class="form-group">
 <label for="fess">
-Patient Email
+Patient E-posta
 </label>
-<input type="email" id="patemail" name="patemail" class="form-control"  value="<?php  echo $row['PatientEmail'];?>" readonly='true'>
+<input type="email" id="patemail" name="patemail" class="form-control"  value="<?php  echo $row['PatientE-posta'];?>" readonly='true'>
 <span id="email-availability-status"></span>
 </div>
 <div class="form-group">
@@ -134,9 +134,9 @@ Patient Address
 </div>
 <div class="form-group">
 <label for="fess">
- Medical History
+ Tıbbi Geçmiş
 </label>
-<textarea type="text" name="medhis" class="form-control"  placeholder="Enter Patient Medical History(if any)" required="true"><?php  echo $row['PatientMedhis'];?></textarea>
+<textarea type="text" name="medhis" class="form-control"  placeholder="Enter Patient Tıbbi Geçmiş(if any)" required="true"><?php  echo $row['PatientMedhis'];?></textarea>
 </div>	
 <div class="form-group">
 <label for="fess">
