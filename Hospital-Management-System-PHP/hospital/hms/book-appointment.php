@@ -16,17 +16,17 @@ $time=$_POST['apptime'];
 $userstatus=1;
 $docstatus=1;
 $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
-	if($query)
-	{
-		echo "<script>alert('Your appointment successfully booked');</script>";
-	}
+        if($query)
+        {
+                echo "<script>alert('Randevunuz başarıyla oluşturuldu');</script>";
+        }
 
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>User  | Book Appointment</title>
+<html lang="tr">
+        <head>
+                <title>Kullanıcı | Randevu Al</title>
 	
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -87,16 +87,16 @@ function getfee(val) {
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Book Appointment</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>User</span>
-									</li>
-									<li class="active">
-										<span>Book Appointment</span>
-									</li>
-								</ol>
+                                                                        <h1 class="mainTitle">Kullanıcı | Randevu Al</h1>
+                                                                                                                               </div>
+                                                                <ol class="breadcrumb">
+                                                                        <li>
+                                                                                <span>Kullanıcı</span>
+                                                                        </li>
+                                                                        <li class="active">
+                                                                                <span>Randevu Al</span>
+                                                                        </li>
+                                                                </ol>
 						</section>
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
@@ -108,7 +108,7 @@ function getfee(val) {
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Book Appointment</h5>
+                                                                                                        <h5 class="panel-title">Randevu Al</h5>
 												</div>
 												<div class="panel-body">
 								<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
@@ -118,11 +118,11 @@ function getfee(val) {
 
 
 <div class="form-group">
-															<label for="DoctorSpecialization">
-																Doctor Specialization
-															</label>
-							<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
-																<option value="">Select Specialization</option>
+                                                                                                                        <label for="DoctorSpecialization">
+                                                                                                                                Doktor Uzmanlığı
+                                                                                                                        </label>
+                                                        <select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
+                                                                                                                                <option value="">Uzmanlık Seçin</option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
 while($row=mysqli_fetch_array($ret))
 {
@@ -139,50 +139,50 @@ while($row=mysqli_fetch_array($ret))
 
 
 														<div class="form-group">
-															<label for="doctor">
-																Doctors
-															</label>
-						<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
-						<option value="">Select Doctor</option>
-						</select>
-														</div>
+                                                                                                                        <label for="doctor">
+                                                                                                                                Doktorlar
+                                                                                                                        </label>
+                                                <select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
+                                                <option value="">Doktor Seçin</option>
+                                                </select>
+                                                                                                                </div>
 
 
 
 
 
 														<div class="form-group">
-															<label for="consultancyfees">
-																Consultancy Fees
-															</label>
-					<select name="fees" class="form-control" id="fees"  readonly>
+                                                                                                                        <label for="consultancyfees">
+                                                                                                                                Muayene Ücreti
+                                                                                                                        </label>
+                                        <select name="fees" class="form-control" id="fees"  readonly>
 						
 						</select>
 														</div>
 														
 <div class="form-group">
-															<label for="AppointmentDate">
-																Date
-															</label>
+                                                                                                                        <label for="AppointmentDate">
+                                                                                                                                Tarih
+                                                                                                                        </label>
 <input class="form-control datepicker" name="appdate"  required="required" data-date-format="yyyy-mm-dd">
 	
 														</div>
 														
 <div class="form-group">
-															<label for="Appointmenttime">
-														
-														Time
-													
-															</label>
-			<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
-														</div>														
-														
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Submit
-														</button>
-													</form>
-												</div>
-											</div>
+                                                                                                                        <label for="Appointmenttime">
+
+                                                                                                                Saat
+
+                                                                                                                        </label>
+                        <input class="form-control" name="apptime" id="timepicker1" required="required">ör: 10:00
+                                                                                                                </div>
+
+                                                                                                                <button type="submit" name="submit" class="btn btn-o btn-primary">
+                                                                                                                        Gönder
+                                                                                                                </button>
+                                                                                                        </form>
+                                                                                               </div>
+                                                                                       </div>
 										</div>
 											
 											</div>

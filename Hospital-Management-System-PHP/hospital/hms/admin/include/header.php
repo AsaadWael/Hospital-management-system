@@ -12,7 +12,7 @@
 							<i class="ti-align-justify"></i>
 						</a>
 						<a class="pull-right menu-toggler visible-xs-block" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
+                                                        <span class="sr-only">Gezinmeyi aç/kapat</span>
 							<i class="ti-view-grid"></i>
 						</a>
 					</div>
@@ -22,7 +22,7 @@
 						<ul class="nav navbar-right">
 							<!-- start: MESSAGES DROPDOWN -->
 								<li  style="padding-top:2% ">
-								<h2>Hospital Management System</h2>
+                                                                <h2>Hastane Yönetim Sistemi</h2>
 							</li>
 						
 						
@@ -32,21 +32,21 @@
 
 
 
-			Admin
+                        Yönetici
 									<i class="ti-angle-down"></i></i></span>
 								</a>
 								<ul class="dropdown-menu dropdown-dark">
 									
 								
 									<li>
-										<a href="change-password.php">
-											Change Password
-										</a>
+                                                                                <a href="change-password.php">
+                                                                                        Şifreyi Değiştir
+                                                                                </a>
 									</li>
 									<li>
-										<a href="logout.php">
-											Log Out
-										</a>
+                                                                                <a href="logout.php">
+                                                                                        Çıkış Yap
+                                                                                </a>
 									</li>
 								</ul>
 							</li>

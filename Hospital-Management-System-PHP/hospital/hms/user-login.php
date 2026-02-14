@@ -27,7 +27,7 @@ $uip=$_SERVER['REMOTE_ADDR'];
 $status=0;
 mysqli_query($con,"insert into userlog(username,userip,status) values('$puname','$uip','$status')");
 
-echo "<script>alert('Invalid username or password');</script>";
+echo "<script>alert('Geçersiz kullanıcı adı veya şifre');</script>";
 echo "<script>window.location.href='user-login.php'</script>";
 }
 }
@@ -35,9 +35,9 @@ echo "<script>window.location.href='user-login.php'</script>";
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>User-Login</title>
+                <title>Kullanıcı Girişi</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -54,42 +54,42 @@ echo "<script>window.location.href='user-login.php'</script>";
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="../index.php"><h2> HMS | Patient Login</h2></a>
+                                <a href="../index.php"><h2> HMS | Hasta Girişi</h2></a>
 				</div>
 
 				<div class="box-login">
 					<form class="form-login" method="post">
 						<fieldset>
 							<legend>
-								Sign in to your account
+                                                                Hesabınıza giriş yapın
 							</legend>
 							<p>
-								Please enter your name and password to log in.<br />
+                                                                Lütfen giriş yapmak için e-posta ve şifrenizi girin.<br />
 								<span style="color:red;"><?php echo $_SESSION['errmsg']; ?><?php echo $_SESSION['errmsg']="";?></span>
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="username" placeholder="Email" required>
+                                                                        <input type="email" class="form-control" name="username" placeholder="E-posta" required>
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                                        <input type="password" class="form-control" name="password" placeholder="Şifre" required>
 									<i class="fa fa-lock"></i>
 									 </span><a href="forgot-password.php">
-									Forgot Password ?
+                                                                        Şifrenizi mi unuttunuz?
 								</a>
 							</div>
 							<div class="form-actions">
 								
 								<button type="submit" class="btn btn-primary pull-right" name="submit">
-									Login <i class="fa fa-arrow-circle-right"></i>
+                                                                        Giriş Yap <i class="fa fa-arrow-circle-right"></i>
 								</button>
 							</div>
 							<div class="new-account">
-								Don't have an account yet?
+                                                                Henüz bir hesabınız yok mu?
 								<a href="registration.php">
-									Create an account
+                                                                        Hesap oluşturun
 								</a>
 							</div>
 						</fieldset>

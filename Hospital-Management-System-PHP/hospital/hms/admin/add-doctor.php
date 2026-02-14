@@ -17,16 +17,16 @@ $password=md5($_POST['npass']);
 $sql=mysqli_query($con,"insert into doctors(specilization,doctorName,address,docFees,contactno,docEmail,password) values('$docspecialization','$docname','$docaddress','$docfees','$doccontactno','$docemail','$password')");
 if($sql)
 {
-echo "<script>alert('Doctor info added Successfully');</script>";
+echo "<script>alert('Doktor bilgisi başarıyla eklendi');</script>";
 echo "<script>window.location.href ='manage-doctors.php'</script>";
 
 }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | Add Doctor</title>
+		<title>Yönetici | Doktor Ekle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -47,7 +47,7 @@ function valid()
 {
  if(document.adddoc.npass.value!= document.adddoc.cfpass.value)
 {
-alert("Password and Confirm Password Field do not match  !!");
+alert("Şifre ve Şifre Doğrulama alanı eşleşmiyor!");
 document.adddoc.cfpass.focus();
 return false;
 }
@@ -86,14 +86,14 @@ error:function (){}
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Add Doctor</h1>
+									<h1 class="mainTitle">Yönetici | Doktor Ekle</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin</span>
+										<span>Yönetici</span>
 									</li>
 									<li class="active">
-										<span>Add Doctor</span>
+										<span>Doktor Ekle</span>
 									</li>
 								</ol>
 							</div>
@@ -108,17 +108,17 @@ error:function (){}
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Add Doctor</h5>
+													<h5 class="panel-title">Doktor Ekle</h5>
 												</div>
 												<div class="panel-body">
 									
 													<form role="form" name="adddoc" method="post" onSubmit="return valid();">
 														<div class="form-group">
 															<label for="DoctorSpecialization">
-																Doctor Specialization
+																Doktor Uzmanlığı
 															</label>
 							<select name="Doctorspecialization" class="form-control" required="true">
-																<option value="">Select Specialization</option>
+																<option value="">Uzmanlık Seçin</option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
 while($row=mysqli_fetch_array($ret))
 {
@@ -133,37 +133,37 @@ while($row=mysqli_fetch_array($ret))
 
 <div class="form-group">
 															<label for="doctorname">
-																 Doctor Name
+																 Doktor Adı
 															</label>
-					<input type="text" name="docname" class="form-control"  placeholder="Enter Doctor Name" required="true">
+					<input type="text" name="docname" class="form-control"  placeholder="Doktor adını girin" required="true">
 														</div>
 
 
 <div class="form-group">
 															<label for="address">
-																 Doctor Clinic Address
+																 Doktor Klinik Adresi
 															</label>
-					<textarea name="clinicaddress" class="form-control"  placeholder="Enter Doctor Clinic Address" required="true"></textarea>
+					<textarea name="clinicaddress" class="form-control"  placeholder="Doktor klinik adresini girin" required="true"></textarea>
 														</div>
 <div class="form-group">
 															<label for="fess">
-																 Doctor Consultancy Fees
+																 Doktor Muayene Ücreti
 															</label>
-					<input type="text" name="docfees" class="form-control"  placeholder="Enter Doctor Consultancy Fees" required="true">
+					<input type="text" name="docfees" class="form-control"  placeholder="Doktor muayene ücretini girin" required="true">
 														</div>
 	
 <div class="form-group">
 									<label for="fess">
-																 Doctor Contact no
+																 Doktor İletişim No
 															</label>
-					<input type="text" name="doccontact" class="form-control"  placeholder="Enter Doctor Contact no" required="true">
+					<input type="text" name="doccontact" class="form-control"  placeholder="Doktor iletişim numarasını girin" required="true">
 														</div>
 
 <div class="form-group">
 									<label for="fess">
-																 Doctor Email
+																 Doktor E-posta
 															</label>
-<input type="email" id="docemail" name="docemail" class="form-control"  placeholder="Enter Doctor Email id" required="true" onBlur="checkemailAvailability()">
+<input type="email" id="docemail" name="docemail" class="form-control"  placeholder="Doktor e-posta adresini girin" required="true" onBlur="checkemailAvailability()">
 <span id="email-availability-status"></span>
 </div>
 
@@ -172,22 +172,22 @@ while($row=mysqli_fetch_array($ret))
 														
 														<div class="form-group">
 															<label for="exampleInputPassword1">
-																 Password
+																 Şifre
 															</label>
-					<input type="password" name="npass" class="form-control"  placeholder="New Password" required="required">
+					<input type="password" name="npass" class="form-control"  placeholder="Yeni şifre" required="required">
 														</div>
 														
 <div class="form-group">
 															<label for="exampleInputPassword2">
-																Confirm Password
+																Şifreyi Doğrula
 															</label>
-									<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password" required="required">
+									<input type="password" name="cfpass" class="form-control"  placeholder="Şifreyi Doğrula" required="required">
 														</div>
 														
 														
 														
 														<button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
-															Submit
+															Gönder
 														</button>
 													</form>
 												</div>

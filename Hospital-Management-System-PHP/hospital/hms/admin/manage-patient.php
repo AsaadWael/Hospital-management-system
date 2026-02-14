@@ -8,9 +8,9 @@ if(strlen($_SESSION['id']==0)) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | View Patients</title>
+		<title>Yönetici | Hastaları Görüntüle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -38,14 +38,14 @@ if(strlen($_SESSION['id']==0)) {
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Admin | View Patients</h1>
+<h1 class="mainTitle">Yönetici | Hastaları Görüntüle</h1>
 </div>
 <ol class="breadcrumb">
 <li>
-<span>Admin</span>
+<span>Yönetici</span>
 </li>
 <li class="active">
-<span>View Patients</span>
+<span>Hastaları Görüntüle</span>
 </li>
 </ol>
 </div>
@@ -53,18 +53,18 @@ if(strlen($_SESSION['id']==0)) {
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
-<h5 class="over-title margin-bottom-15">View <span class="text-bold">Patients</span></h5>
+<h5 class="over-title margin-bottom-15">Hastaları Görüntüle</h5>
 	
 <table class="table table-hover" id="sample-table-1">
 <thead>
 <tr>
 <th class="center">#</th>
-<th>Patient Name</th>
-<th>Patient Contact Number</th>
-<th>Patient Gender </th>
+<th>Hasta Adı</th>
+<th>Hasta İletişim Numarası</th>
+<th>Hasta Cinsiyeti </th>
 <th>Creation Date </th>
 <th>Updation Date </th>
-<th>Action</th>
+<th>İşlem</th>
 </tr>
 </thead>
 <tbody>

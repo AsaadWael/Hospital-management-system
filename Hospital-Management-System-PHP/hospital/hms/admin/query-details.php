@@ -6,7 +6,7 @@ if(strlen($_SESSION['id']==0)) {
  header('location:logout.php');
   } else{
 
-//updating Admin Remark
+//updating Yönetici Notu
 if(isset($_POST['update']))
 		  {
 $qid=intval($_GET['id']);
@@ -14,15 +14,15 @@ $adminremark=$_POST['adminremark'];
 $isread=1;
 $query=mysqli_query($con,"update tblcontactus set  AdminRemark='$adminremark',IsRead='$isread' where id='$qid'");
 if($query){
-echo "<script>alert('Admin Remark updated successfully.');</script>";
+echo "<script>alert('Yönetici notu başarıyla güncellendi.');</script>";
 echo "<script>window.location.href ='read-query.php'</script>";
 }
 		  }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | Query Details</title>
+		<title>Yönetici | Soru Detayları</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -53,15 +53,15 @@ echo "<script>window.location.href ='read-query.php'</script>";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin | Query Details</h1>
+									<h1 class="mainTitle">Yönetici | Soru Detayları</h1>
 																	</div>
 
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin</span>
+										<span>Yönetici</span>
 									</li>
 									<li class="active">
-										<span>Query Details</span>
+										<span>Soru Detayları</span>
 									</li>
 								</ol>
 							</div>
@@ -73,7 +73,7 @@ echo "<script>window.location.href ='read-query.php'</script>";
 
 									<div class="row">
 								<div class="col-md-12">
-									<h5 class="over-title margin-bottom-15">Manage <span class="text-bold">Query Details</span></h5>
+									<h5 class="over-title margin-bottom-15">Soru detaylarını yönet</h5>
 												<hr />
 									<table class="table table-hover" id="sample-table-1">
 		
@@ -87,39 +87,39 @@ while($row=mysqli_fetch_array($sql))
 ?>
 
 											<tr>
-												<th>Full Name</th>
+												<th>Tam Ad</th>
 												<td><?php echo $row['fullname'];?></td>
 											</tr>
 
 											<tr>
-												<th>Email Id</th>
+												<th>E-posta</th>
 												<td><?php echo $row['email'];?></td>
 											</tr>
 											<tr>
-												<th>Conatact Numner</th>
+												<th>İletişim Numarası</th>
 												<td><?php echo $row['contactno'];?></td>
 											</tr>
 											<tr>
-												<th>Message</th>
+												<th>Mesaj</th>
 												<td><?php echo $row['message'];?></td>
 												</tr>
 
 																						<tr>
-												<th>Query Date</th>
+												<th>Soru Tarihi</th>
 												<td><?php echo $row['PostingDate'];?></td>
 												</tr>
 
 <?php if($row['AdminRemark']==""){?>	
 <form name="query" method="post">
 	<tr>
-												<th>Admin Remark</th>
+												<th>Yönetici Notu</th>
 												<td><textarea name="adminremark" class="form-control" required="true"></textarea></td>
 												</tr>
 												<tr>
 													<td>&nbsp;</td>
 													<td>	
 														<button type="submit" class="btn btn-primary pull-left" name="update">
-		Update <i class="fa fa-arrow-circle-right"></i>
+		Güncelle <i class="fa fa-arrow-circle-right"></i>
 								</button>
 
 													</td>
@@ -129,12 +129,12 @@ while($row=mysqli_fetch_array($sql))
 													<?php } else {?>										
 	
 	<tr>
-												<th>Admin Remark</th>
+												<th>Yönetici Notu</th>
 												<td><?php echo $row['AdminRemark'];?></td>
 												</tr>
 
 <tr>
-												<th>Last Updatation Date</th>
+												<th>Son Güncelleme Tarihi</th>
 												<td><?php echo $row['LastupdationDate'];?></td>
 												</tr>
 											

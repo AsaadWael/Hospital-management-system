@@ -9,13 +9,13 @@ if(strlen($_SESSION['id']==0)) {
 if(isset($_GET['cancel']))
 		  {
 mysqli_query($con,"update appointment set doctorStatus='0' where id ='".$_GET['id']."'");
-                  $_SESSION['msg']="Appointment canceled !!";
+                 $_SESSION['msg']="Randevu iptal edildi !!";
 		  }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Doctor | Appointment History</title>
+<html lang="tr">
+        <head>
+                <title>Doktor | Randevu Geçmişi</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -46,14 +46,14 @@ mysqli_query($con,"update appointment set doctorStatus='0' where id ='".$_GET['i
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Doctor  | Appointment History</h1>
+                                                                        <h1 class="mainTitle">Doktor  | Randevu Geçmişi</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Doctor </span>
+                                                                                <span>Doktor</span>
 									</li>
 									<li class="active">
-										<span>Appointment History</span>
+                                                                                <span>Randevu Geçmişi</span>
 									</li>
 								</ol>
 							</div>
@@ -72,13 +72,13 @@ mysqli_query($con,"update appointment set doctorStatus='0' where id ='".$_GET['i
 										<thead>
 											<tr>
 												<th class="center">#</th>
-												<th class="hidden-xs">Patient  Name</th>
-												<th>Specialization</th>
-												<th>Consultancy Fee</th>
-												<th>Appointment Date / Time </th>
-												<th>Appointment Creation Date  </th>
-												<th>Current Status</th>
-												<th>Action</th>
+                                                                                                <th class="hidden-xs">Hasta Adı</th>
+                                                                                                <th>Uzmanlık</th>
+                                                                                                <th>Muayene Ücreti</th>
+                                                                                                <th>Randevu Tarihi / Saati</th>
+                                                                                                <th>Randevu Oluşturma Tarihi</th>
+                                                                                                <th>Güncel Durum</th>
+                                                                                                <th>İşlem</th>
 												
 											</tr>
 										</thead>
@@ -102,16 +102,16 @@ while($row=mysqli_fetch_array($sql))
 												<td>
 <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
 {
-	echo "Active";
+        echo "Aktif";
 }
-if(($row['userStatus']==0) && ($row['doctorStatus']==1))  
+if(($row['userStatus']==0) && ($row['doctorStatus']==1))
 {
-	echo "Cancel by Patient";
+        echo "Hasta tarafından iptal";
 }
 
-if(($row['userStatus']==1) && ($row['doctorStatus']==0))  
+if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 {
-	echo "Cancel by you";
+        echo "Siz tarafından iptal";
 }
 
 
@@ -123,11 +123,11 @@ if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 { ?>
 
 													
-	<a href="appointment-history.php?id=<?php echo $row['id']?>&cancel=update" onClick="return confirm('Are you sure you want to cancel this appointment ?')" class="btn btn-info btn-xs" title="Cancel Appointment" tooltip-placement="top" tooltip="Remove">Cancel</a>
-	<?php } else {
+        <a href="appointment-history.php?id=<?php echo $row['id']?>&cancel=update" onClick="return confirm('Bu randevuyu iptal etmek istediğinize emin misiniz?')" class="btn btn-info btn-xs" title="Randevuyu İptal Et" tooltip-placement="top" tooltip="Remove">İptal Et</a>
+        <?php } else {
 
-		echo "Canceled";
-		} ?>
+                echo "İptal Edildi";
+                } ?>
 												</div>
 												</td>
 											</tr>

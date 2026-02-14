@@ -8,13 +8,13 @@ if(strlen($_SESSION['id']==0)) {
 if(isset($_GET['cancel']))
 		  {
 		          mysqli_query($con,"update appointment set userStatus='0' where id = '".$_GET['id']."'");
-                  $_SESSION['msg']="Your appointment canceled !!";
-		  }
+                 $_SESSION['msg']="Randevunuz iptal edildi!";
+                  }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>User | Appointment History</title>
+<html lang="tr">
+        <head>
+                <title>Kullanıcı | Randevu Geçmişi</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -45,17 +45,17 @@ if(isset($_GET['cancel']))
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User  | Appointment History</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>User </span>
-									</li>
-									<li class="active">
-										<span>Appointment History</span>
-									</li>
-								</ol>
-							</div>
+                                                                        <h1 class="mainTitle">Kullanıcı | Randevu Geçmişi</h1>
+                                                                                                                               </div>
+                                                                <ol class="breadcrumb">
+                                                                        <li>
+                                                                                <span>Kullanıcı </span>
+                                                                        </li>
+                                                                        <li class="active">
+                                                                                <span>Randevu Geçmişi</span>
+                                                                        </li>
+                                                                </ol>
+                                                        </div>
 						</section>
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
@@ -71,13 +71,13 @@ if(isset($_GET['cancel']))
 										<thead>
 											<tr>
 												<th class="center">#</th>
-												<th class="hidden-xs">Doctor Name</th>
-												<th>Specialization</th>
-												<th>Consultancy Fee</th>
-												<th>Appointment Date / Time </th>
-												<th>Appointment Creation Date  </th>
-												<th>Current Status</th>
-												<th>Action</th>
+                                                                                                <th class="hidden-xs">Doktor Adı</th>
+                                                                                                <th>Uzmanlık</th>
+                                                                                                <th>Muayene Ücreti</th>
+                                                                                                <th>Randevu Tarihi / Saati </th>
+                                                                                                <th>Randevu Oluşturma Tarihi  </th>
+                                                                                                <th>Güncel Durum</th>
+                                                                                                <th>İşlem</th>
 												
 											</tr>
 										</thead>
@@ -99,18 +99,18 @@ while($row=mysqli_fetch_array($sql))
 												</td>
 												<td><?php echo $row['postingDate'];?></td>
 												<td>
-<?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
+<?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))
 {
-	echo "Active";
+        echo "Aktif";
 }
-if(($row['userStatus']==0) && ($row['doctorStatus']==1))  
+if(($row['userStatus']==0) && ($row['doctorStatus']==1))
 {
-	echo "Cancel by You";
+        echo "Sizin Tarafınızdan İptal";
 }
 
-if(($row['userStatus']==1) && ($row['doctorStatus']==0))  
+if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 {
-	echo "Cancel by Doctor";
+        echo "Doktor Tarafından İptal";
 }
 
 
@@ -122,35 +122,35 @@ if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 { ?>
 
 													
-	<a href="appointment-history.php?id=<?php echo $row['id']?>&cancel=update" onClick="return confirm('Are you sure you want to cancel this appointment ?')"class="btn btn-primary btn-xs" title="Cancel Appointment" tooltip-placement="top" tooltip="Remove">Cancel</a>
-	<?php } else {
+        <a href="appointment-history.php?id=<?php echo $row['id']?>&cancel=update" onClick="return confirm('Bu randevuyu iptal etmek istediğinize emin misiniz?')"class="btn btn-primary btn-xs" title="Randevuyu İptal Et" tooltip-placement="top" tooltip="Remove">İptal Et</a>
+        <?php } else {
 
-		echo "Canceled";
-		} ?>
-												</div>
-												<div class="visible-xs visible-sm hidden-md hidden-lg">
-													<div class="btn-group" dropdown is-open="status.isopen">
-														<button type="button" class="btn btn-primary btn-o btn-sm dropdown-toggle" dropdown-toggle>
-															<i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu pull-right dropdown-light" role="menu">
-															<li>
-																<a href="#">
-																	Edit
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	Share
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	Remove
-																</a>
-															</li>
-														</ul>
-													</div>
+                echo "İptal Edildi";
+                } ?>
+                                                                                                </div>
+                                                                                                <div class="visible-xs visible-sm hidden-md hidden-lg">
+                                                                                                        <div class="btn-group" dropdown is-open="status.isopen">
+                                                                                                                <button type="button" class="btn btn-primary btn-o btn-sm dropdown-toggle" dropdown-toggle>
+                                                                                                                        <i class="fa fa-cog"></i>&nbsp;<span class="caret"></span>
+                                                                                                                </button>
+                                                                                                                <ul class="dropdown-menu pull-right dropdown-light" role="menu">
+                                                                                                                        <li>
+                                                                                                                                <a href="#">
+                                                                                                                                Düzenle
+                                                                                                                                </a>
+                                                                                                                        </li>
+                                                                                                                        <li>
+                                                                                                                                <a href="#">
+                                                                                                                                Paylaş
+                                                                                                                                </a>
+                                                                                                                        </li>
+                                                                                                                        <li>
+                                                                                                                                <a href="#">
+                                                                                                                                Kaldır
+                                                                                                                                </a>
+                                                                                                                        </li>
+                                                                                                                </ul>
+                                                                                                        </div>
 												</div></td>
 											</tr>
 											

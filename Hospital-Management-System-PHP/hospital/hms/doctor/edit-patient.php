@@ -19,16 +19,16 @@ $medhis=$_POST['medhis'];
 $sql=mysqli_query($con,"update tblpatient set PatientName='$patname',PatientContno='$patcontact',PatientEmail='$patemail',PatientGender='$gender',PatientAdd='$pataddress',PatientAge='$patage',PatientMedhis='$medhis' where ID='$eid'");
 if($sql)
 {
-echo "<script>alert('Patient info updated Successfully');</script>";
+echo "<script>alert('Hasta bilgisi başarıyla güncellendi');</script>";
 header('location:manage-patient.php');
 
 }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Doctor | Add Patient</title>
+<html lang="tr">
+        <head>
+                <title>Doktor | Hasta Güncelle</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -59,14 +59,14 @@ header('location:manage-patient.php');
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Patient | Add Patient</h1>
+<h1 class="mainTitle">Hasta | Hasta Güncelle</h1>
 </div>
 <ol class="breadcrumb">
 <li>
-<span>Patient</span>
+<span>Hasta</span>
 </li>
 <li class="active">
-<span>Add Patient</span>
+<span>Hasta Güncelle</span>
 </li>
 </ol>
 </div>
@@ -78,7 +78,7 @@ header('location:manage-patient.php');
 <div class="col-lg-8 col-md-12">
 <div class="panel panel-white">
 <div class="panel-heading">
-<h5 class="panel-title">Add Patient</h5>
+<h5 class="panel-title">Hasta Güncelle</h5>
 </div>
 <div class="panel-body">
 <form role="form" name="" method="post">
@@ -91,62 +91,62 @@ while ($row=mysqli_fetch_array($ret)) {
 ?>
 <div class="form-group">
 <label for="doctorname">
-Patient Name
+Hasta Adı
 </label>
 <input type="text" name="patname" class="form-control"  value="<?php  echo $row['PatientName'];?>" required="true">
 </div>
 <div class="form-group">
 <label for="fess">
- Patient Contact no
+ Hasta İletişim No
 </label>
 <input type="text" name="patcontact" class="form-control"  value="<?php  echo $row['PatientContno'];?>" required="true" maxlength="10" pattern="[0-9]+">
 </div>
 <div class="form-group">
 <label for="fess">
-Patient Email
+Hasta E-postası
 </label>
 <input type="email" id="patemail" name="patemail" class="form-control"  value="<?php  echo $row['PatientEmail'];?>" readonly='true'>
 <span id="email-availability-status"></span>
 </div>
 <div class="form-group">
-              <label class="control-label">Gender: </label>
+              <label class="control-label">Cinsiyet:</label>
               <?php  if($row['Gender']=="Female"){ ?>
-              <input type="radio" name="gender" id="gender" value="Female" checked="true">Female
-              <input type="radio" name="gender" id="gender" value="male">Male
+              <input type="radio" name="gender" id="gender" value="Female" checked="true">Kadın
+              <input type="radio" name="gender" id="gender" value="male">Erkek
               <?php } else { ?>
               <label>
-              <input type="radio" name="gender" id="gender" value="Male" checked="true">Male
-              <input type="radio" name="gender" id="gender" value="Female">Female
+              <input type="radio" name="gender" id="gender" value="Male" checked="true">Erkek
+              <input type="radio" name="gender" id="gender" value="Female">Kadın
               </label>
              <?php } ?>
             </div>
 <div class="form-group">
 <label for="address">
-Patient Address
+Hasta Adresi
 </label>
 <textarea name="pataddress" class="form-control" required="true"><?php  echo $row['PatientAdd'];?></textarea>
 </div>
 <div class="form-group">
 <label for="fess">
- Patient Age
+ Hasta Yaşı
 </label>
 <input type="text" name="patage" class="form-control"  value="<?php  echo $row['PatientAge'];?>" required="true">
 </div>
 <div class="form-group">
 <label for="fess">
- Medical History
+ Tıbbi Geçmiş
 </label>
 <textarea type="text" name="medhis" class="form-control"  placeholder="Enter Patient Medical History(if any)" required="true"><?php  echo $row['PatientMedhis'];?></textarea>
 </div>	
 <div class="form-group">
-<label for="fess">
- Creation Date
-</label>
+                                                                                                                        <label for="fess">
+Oluşturulma Tarihi
+                                                                                                                        </label>
 <input type="text" class="form-control"  value="<?php  echo $row['CreationDate'];?>" readonly='true'>
 </div>
 <?php } ?>
 <button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
-Update
+Güncelle
 </button>
 </form>
 </div>

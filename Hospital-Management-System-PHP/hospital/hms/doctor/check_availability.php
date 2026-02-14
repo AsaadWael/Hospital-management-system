@@ -6,11 +6,11 @@ $result =mysqli_query($con,"SELECT PatientEmail FROM tblpatient WHERE PatientEma
 $count=mysqli_num_rows($result);
 if($count>0)
 {
-echo "<span style='color:red'> Email already exists .</span>";
+echo "<span style='color:red'> E-posta zaten mevcut.</span>";
  echo "<script>$('#submit').prop('disabled',true);</script>";
 } else{
-	
-	echo "<span style='color:green'> Email available for Registration .</span>";
+
+        echo "<span style='color:green'> E-posta kayıt için uygun.</span>";
  echo "<script>$('#submit').prop('disabled',false);</script>";
 }
 }

@@ -18,10 +18,10 @@ if($query)
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 	<head>
-		<title>User Registration</title>
+		<title>Kullanıcı Kaydı</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -51,71 +51,71 @@ if($query)
 					<form name="registration" id="registration"  method="post">
 						<fieldset>
 							<legend>
-								Sign Up
+								Kayıt Ol
 							</legend>
 							<p>
-								Enter your personal details below:
+								Kişisel bilgilerinizi aşağıya girin:
 							</p>
 							<div class="form-group">
-								<input type="text" class="form-control" name="full_name" placeholder="Full Name" required>
+								<input type="text" class="form-control" name="full_name" placeholder="Tam Ad" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="address" placeholder="Address" required>
+								<input type="text" class="form-control" name="address" placeholder="Adres" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="city" placeholder="City" required>
+								<input type="text" class="form-control" name="city" placeholder="Şehir" required>
 							</div>
 							<div class="form-group">
 								<label class="block">
-									Gender
+									Cinsiyet
 								</label>
 								<div class="clip-radio radio-primary">
 									<input type="radio" id="rg-female" name="gender" value="female" >
 									<label for="rg-female">
-										Female
+										Kadın
 									</label>
 									<input type="radio" id="rg-male" name="gender" value="male">
 									<label for="rg-male">
-										Male
+										Erkek
 									</label>
 								</div>
 							</div>
 							<p>
-								Enter your account details below:
+								Hesap bilgilerinizi aşağıya girin:
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
+									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="E-posta" required>
 									<i class="fa fa-envelope"></i> </span>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 							</div>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+									<input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control" name="password_again" placeholder="Password Again" required>
+									<input type="password" class="form-control" name="password_again" placeholder="Şifre Tekrarı" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							<div class="form-group">
 								<div class="checkbox clip-check check-primary">
 									<input type="checkbox" id="agree" value="agree">
 									<label for="agree">
-										I agree
+										Kabul ediyorum
 									</label>
 								</div>
 							</div>
 							<div class="form-actions">
 								<p>
-									Already have an account?
+									Zaten hesabınız var mı?
 									<a href="user-login.php">
-										Log-in
+										Giriş yap
 									</a>
 								</p>
 								<button type="submit" class="btn btn-primary pull-right" id="submit" name="submit">
-									Submit <i class="fa fa-arrow-circle-right"></i>
+									Gönder <i class="fa fa-arrow-circle-right"></i>
 								</button>
 							</div>
 						</fieldset>

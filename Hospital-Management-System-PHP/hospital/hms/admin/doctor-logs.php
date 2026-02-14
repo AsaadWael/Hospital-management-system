@@ -8,9 +8,9 @@ if(strlen($_SESSION['id']==0)) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 	<head>
-		<title>Admin | Doctor Session Logs</title>
+		<title>Yönetici | Doktor Oturum Kayıtları</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -41,14 +41,14 @@ if(strlen($_SESSION['id']==0)) {
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">Admin  | Doctor Session Logs</h1>
+									<h1 class="mainTitle">Yönetici | Doktor Oturum Kayıtları</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>Admin </span>
+										<span>Yönetici </span>
 									</li>
 									<li class="active">
-										<span>Doctor Session Logs</span>
+										<span>Doktor Oturum Kayıtları</span>
 									</li>
 								</ol>
 							</div>
@@ -67,12 +67,12 @@ if(strlen($_SESSION['id']==0)) {
 										<thead>
 											<tr>
 												<th class="center">#</th>
-												<th class="hidden-xs">User id</th>
-												<th>Username</th>
-												<th>User IP</th>
-												<th>Login time</th>
-												<th>Logout Time </th>
-												<th> Status </th>
+												<th class="hidden-xs">Kullanıcı ID</th>
+												<th>Kullanıcı Adı</th>
+												<th>Kullanıcı IP</th>
+												<th>Giriş zamanı</th>
+												<th>Çıkış zamanı </th>
+												<th> Durum </th>
 												
 												
 											</tr>
@@ -97,11 +97,11 @@ while($row=mysqli_fetch_array($sql))
 												<td>
 <?php if($row['status']==1)
 {
-	echo "Success";
+	echo "Başarılı";
 }
 else
 {
-	echo "Failed";
+	echo "Başarısız";
 }?>
 
 </td>
